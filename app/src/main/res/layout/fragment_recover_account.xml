@@ -12,18 +12,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/icback"
-            android:paddingTop="40dp"
-            >
+            android:paddingTop="40dp" >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recuperar Conta"
+                android:text="Recuperar conta"
                 android:textColor="@color/white"
-                android:layout_gravity="center_horizontal"
-                />
+                android:layout_gravity="center_horizontal"/>
         </com.google.android.material.appbar.MaterialToolbar>
         <LinearLayout
             android:layout_width="match_parent"

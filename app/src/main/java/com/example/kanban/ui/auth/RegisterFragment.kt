@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.example.kanban.R
 import com.example.kanban.databinding.FragmentLoginBinding
 import com.example.kanban.databinding.FragmentRegisterBinding
+import com.example.kanban.util.initToolbar
 
 class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? =null
@@ -20,6 +21,12 @@ class RegisterFragment : Fragment() {
         _binding= FragmentRegisterBinding.inflate(inflater,container,false)
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding=null
