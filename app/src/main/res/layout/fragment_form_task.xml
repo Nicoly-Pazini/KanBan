@@ -75,6 +75,7 @@
                 android:backgroundTint="@color/black"
                 android:id="@+id/rbTodo"
                 android:text="A fazer"
+                android:checked="true"
                 android:theme="@style/MyRadioButton"
                 android:textColor="@color/white"/>
             <RadioButton

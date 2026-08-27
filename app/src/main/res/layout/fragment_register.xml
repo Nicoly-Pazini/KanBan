@@ -13,21 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:navigationIcon="@drawable/icback"
-        android:paddingTop="40dp" >
 
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Criar conta"
-        android:textColor="@color/white"
-        android:layout_gravity="center_horizontal"/>
 
-    </com.google.android.material.appbar.MaterialToolbar>
+
 
     <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
@@ -62,6 +50,7 @@
             android:layout_height="48dp"
             android:hint="Digite seu e-mail"
             android:inputType="textEmailAddress"
+            android:id="@+id/editTextEmail"
             android:padding="10dp"
             android:layout_marginTop="4dp"
             android:background="@drawable/bg_edit_text"/>
@@ -69,6 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Senha"
+            android:id="@+id/editTextSenha"
             android:textColor="@color/white"
             android:layout_marginTop="16dp"/>
 
@@ -87,6 +77,7 @@
             android:text="Enviar"
             android:textColor="@color/primaria"
             app:backgroundTint="@null"
+            android:id="@+id/buttonResgister"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_btn"
 

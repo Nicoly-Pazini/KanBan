@@ -2,9 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="rosa">#D971BA</color>
-    <color name="fundo">#6EB3F6</color>
-    <color name="primaria">#6EB3F6</color>
-    <color name="primariaVariante">#4A64C3</color>
+    <color name="rosa">#F27CCF</color>
+    <color name="fundo">#F66EDF</color>
+    <color name="primaria">#E279D5</color>
+    <color name="primariaVariante">#DC33A9</color>
     <color name="green">#4C8314</color>
 </resources>
