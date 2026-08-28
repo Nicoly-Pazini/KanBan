@@ -11,6 +11,7 @@ import com.example.kanban.R
 import com.example.kanban.databinding.FragmentFormTaskBinding
 import com.example.kanban.databinding.FragmentRecoverAccountBinding
 import com.example.kanban.util.initToolbar
+import com.example.kanban.util.showBottomSheet
 
 
 class FormTaskFragment : Fragment() {
@@ -39,10 +40,9 @@ class FormTaskFragment : Fragment() {
     private fun validateData(){
         val description = binding.editTextDescricao.text.toString().trim()
         if (description.isNotBlank()){
-            Toast.makeText(requireContext(), "Tudo OK!", Toast.LENGTH_SHORT).show()
 
         }else{
-
+            showBottomSheet(message = getString(R.string.description_empty_form_tak_fragment))
         }
     }
     override fun onDestroyView() {

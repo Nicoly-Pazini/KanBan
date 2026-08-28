@@ -21,17 +21,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="E-mail"
+            android:text="@string/email_text"
             android:textColor="@color/white"/>
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:hint="Digite seu e-mail"
+            style="@style/EditTextTheme"
+            android:hint="@string/hint_edit_email"
             android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/bg_edit_text"/>
+            android:layout_marginTop="4dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,20 +43,18 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:inputType="textPassword"
-            android:hint="Digite sua senha"
-            android:padding="10dp"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/bg_edit_text"/>
+            android:hint="@string/password_text"
+            style="@style/EditTextTheme"
+            android:layout_marginTop="4dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:textColor="@color/primaria"
             app:backgroundTint="@null"
             android:layout_marginTop="16dp"
-            android:background="@drawable/bg_btn"
+            style="@style/ButtonTheme"
 
             />
         <LinearLayout

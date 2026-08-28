@@ -10,6 +10,7 @@ import com.example.kanban.R
 import com.example.kanban.databinding.FragmentLoginBinding
 import com.example.kanban.databinding.FragmentRegisterBinding
 import com.example.kanban.util.initToolbar
+import com.example.kanban.util.showBottomSheet
 
 class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? =null
@@ -39,11 +40,11 @@ class RegisterFragment : Fragment() {
         if (email.isNotBlank()){
             if(senha.isNotBlank()){
                 Toast.makeText(requireContext(),"Tudo OK!", Toast.LENGTH_SHORT).show()
-            }else{
+            }else {
+                showBottomSheet(message = getString(R.string.password_empty_register_fragment))
             }
-            Toast.makeText(requireContext(), "Preencha uma senha!", Toast.LENGTH_SHORT).show()
-        }else {
-            Toast.makeText(requireContext(), "Preencha um email valido!", Toast.LENGTH_SHORT).show()
+        }else{
+            showBottomSheet(message =getString( R.string.email_empty_register_fragment))
         }
     }
     override fun onDestroyView() {

@@ -7,4 +7,6 @@
     <color name="primaria">#E279D5</color>
     <color name="primariaVariante">#DC33A9</color>
     <color name="green">#4C8314</color>
+    <color name="color_delete">#EB556B</color>
+    <color name="color_details">#CB78FA</color>
 </resources>

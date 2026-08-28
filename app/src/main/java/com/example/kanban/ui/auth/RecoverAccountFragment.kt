@@ -10,6 +10,7 @@ import com.example.kanban.R
 import com.example.kanban.databinding.FragmentRecoverAccountBinding
 import com.example.kanban.databinding.FragmentRegisterBinding
 import com.example.kanban.util.initToolbar
+import com.example.kanban.util.showBottomSheet
 
 
 class RecoverAccountFragment : Fragment() {
@@ -38,8 +39,7 @@ class RecoverAccountFragment : Fragment() {
         if (email.isNotBlank()){
 
         }else {
-            Toast.makeText(requireContext(), "Preencha um email valido!", Toast.LENGTH_SHORT).show()
-        }
+            showBottomSheet(message = getString( R.string.email_empty))  }
 
     }
     override fun onDestroyView() {
