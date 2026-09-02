@@ -1,6 +1,7 @@
 package com.example.kanban.model
 
 import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 class Task(string: String, string1: String) {
