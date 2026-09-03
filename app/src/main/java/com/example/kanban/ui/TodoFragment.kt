@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kanban.R
 import com.example.kanban.databinding.FragmentTodoBinding
+import com.example.kanban.model.Status
 import com.example.kanban.model.Task
 import com.example.kanban.ui.adapter.TaskAdapter
 
@@ -44,16 +45,20 @@ class TodoFragment : Fragment() {
     private fun initReclyclerViewTask(taskList: List<Task>){
         binding.recyclerViewTask.layoutManager= LinearLayoutManager(requireContext())
         binding.recyclerViewTask.setHasFixedSize(true)
-
+        taskAdapter= TaskAdapter(requireContext(),taskList) {task, option-> optionSelected(task,option) }
         binding.recyclerViewTask.adapter = taskAdapter
 
     }
+    private fun optionSelected(task: Task,option: Int){
+
+    }
+
     private fun getTask()=listOf(
-        Task("0", "Criar nova tela do app"),
-        Task("1", "Validar informações na telas de login"),
-        Task("2", "Tarefa 3"),
-        Task("3", "Tarefa 4"),
-        Task("4", "Tarefa 5"),
+        Task("0", "Criar nova tela do app", Status.TODO),
+        Task("1", "Validar informações na telas de login", Status.TODO),
+        Task("2", "Tarefa 3", Status.TODO),
+        Task("3", "Tarefa 4", Status.TODO),
+        Task("4", "Tarefa 5", Status.TODO),
     )
 
 

@@ -42,7 +42,7 @@ class FormTaskFragment : Fragment() {
         if (description.isNotBlank()){
 
         }else{
-            showBottomSheet(message = getString(R.string.description_empty_form_tak_fragment))
+            showBottomSheet(message = getString(R.string.description_empty_form_task_fragment))
         }
     }
     override fun onDestroyView() {

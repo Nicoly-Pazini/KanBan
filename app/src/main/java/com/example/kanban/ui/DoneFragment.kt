@@ -5,14 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kanban.R
 import com.example.kanban.databinding.FragmentDoneBinding
 import com.example.kanban.databinding.FragmentHomeBinding
+import com.example.kanban.model.Status
+import com.example.kanban.model.Task
+import com.example.kanban.ui.adapter.TaskAdapter
 
 
 class DoneFragment : Fragment() {
     private var _binding: FragmentDoneBinding? = null
     private val binding get() = _binding!!
+    private lateinit var taskAdapter: TaskAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,6 +26,30 @@ class DoneFragment : Fragment() {
         _binding = FragmentDoneBinding.inflate(inflater,container,false)
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initReclyclerViewTask(getTask())
+    }
+    private fun initReclyclerViewTask(taskList: List<Task>){
+        binding.recyclerViewTask.layoutManager= LinearLayoutManager(requireContext())
+        binding.recyclerViewTask.setHasFixedSize(true)
+        taskAdapter= TaskAdapter(requireContext(),taskList) {task, option-> optionSelected(task,option) }
+        binding.recyclerViewTask.adapter = taskAdapter
+
+    }
+    private fun optionSelected(task: Task,option: Int){
+
+    }
+
+    private fun getTask()=listOf(
+        Task("0", "Criar nova tela do app", Status.TODO),
+        Task("1", "Validar informações na telas de login", Status.TODO),
+        Task("2", "Tarefa 3", Status.TODO),
+        Task("3", "Tarefa 4", Status.TODO),
+        Task("4", "Tarefa 5", Status.TODO),
+    )
+
 
     override fun onDestroyView() {
         super.onDestroyView()
