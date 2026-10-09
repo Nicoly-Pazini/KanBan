@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "137666486141",
+    "project_id": "taskapp-17472",
+    "storage_bucket": "taskapp-17472.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137666486141:android:505ca42535684e43067614",
+        "android_client_info": {
+          "package_name": "com.example.kanban"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiApXVNdiF6zdYYXmDzm98k0Vz1fBLVzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
