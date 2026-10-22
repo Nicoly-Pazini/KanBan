@@ -46,6 +46,7 @@ class RegisterFragment : Fragment() {
             if(senha.isNotBlank()){
                 Toast.makeText(requireContext(),"Tudo OK!", Toast.LENGTH_SHORT).show()
                 binding.progressBar.isVisible= true
+                registerUser(email,senha)
             }else {
                 showBottomSheet(message = getString(R.string.password_empty_register_fragment))
             }
@@ -62,7 +63,7 @@ class RegisterFragment : Fragment() {
                     if (task.isSuccessful){
                         findNavController().navigate(R.id.action_global_homeFragment)
                     }else{
-                        binding.progressBar.isVisible=true
+                        binding.progressBar.isVisible=false
                         Toast.makeText(requireContext(),task.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
